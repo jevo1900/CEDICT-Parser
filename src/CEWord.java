@@ -1,12 +1,14 @@
 
 public class CEWord {
 
+    public final String FULL;
     public final String TRADITIONAL;
     public final String SIMPLIFIED;
     public final String PINYIN;
     public final String[] ENGLISH;
 
     public CEWord(String lines) {
+        this.FULL = lines;
         String caracteres = lines.substring(0, lines.indexOf("["));
         String pinyin_eng = lines.substring(lines.indexOf("["));
         String[] ar = pinyin_eng.split(" /");
